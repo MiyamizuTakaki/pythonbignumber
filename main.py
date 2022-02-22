@@ -1,15 +1,15 @@
-import random
 from bignumber import *
 from xulie import *
-spare_1010 = []
-x = []
-z = 4
-q = 4
-for number1 in range(0,z):
-    for number in range(0,z):
-        x.append(random.randint(0,20))
-    spare_1010.append(x)
-    x = []
-x = bignumber(spare_1010,z,q)
-print("This is a big number "+str(x))
-xulie(spare_1010,z,q)
+from sqare import sqare
+##set ranks
+x =10
+y =10
+##set ranks and maxvaule
+for vet in range(0,2):
+    sz = sqare(x,y,70)
+    spare_1010 = sz.create()
+    bigchoose = bignumber(spare_1010,x,y)
+    print("This is "+str(vet+1))
+    print("This is a big number "+str(bigchoose))
+    xulie(spare_1010,x,y)
+    print("\n\n\n\n")
